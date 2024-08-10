@@ -3,20 +3,14 @@ from colorama import init, Fore, Style
 from tqdm import tqdm
 import time
 import os
+import pyfiglet
 
 # Inisialisasi colorama
 init(autoreset=True)
 
 def print_header():
-    # Header ASCII Art
-    header = r"""
-     _    _ _   _ _             
-    / \  | | | | (_)            
-   / _ \ | | | | |_ _ __   __ _  
-  / ___ \| | | | | | '_ \ / _` | 
- /_/   \_\_| |_|_|_| | | | (_| | 
-                    |_| |_|\__,_| 
-    """
+    # Header dengan pyfiglet
+    header = pyfiglet.figlet_format("Annie", font="slant")
     print(Fore.CYAN + header)
     print(Fore.MAGENTA + Style.BRIGHT + "coded by D A N Z")
     print(Style.RESET_ALL)
